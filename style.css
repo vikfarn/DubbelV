@@ -1,0 +1,77 @@
+
+body{
+    background-color: black;
+    background-color : #ffceed;
+    overflow: hidden;
+}
+.image{
+    z-index: 5;
+    position: absolute;
+    top: -100vh;
+    width: 50vw;
+    display: none;
+    
+}
+#title{
+    font-size: 15vw;
+    margin-top: 40vh;
+    color: red;
+    text-align: center;
+}
+@keyframes propel-image {
+    
+        100% {
+        position:absolute;
+        top: 110vh;
+        }
+    
+        0% {
+        position:absolute;
+        top: -50vh;
+        }
+       
+    }
+    
+
+    .heart {
+        z-index : 0;
+        animation : heartfade 6s linear;
+        position : absolute;
+     }
+     .heart:before,
+     .heart:after {
+        content : "";
+        background-color : #fc2a62;
+        position : absolute;
+        height : 30px;
+        width : 45px;
+        border-radius : 15px 0px 0px 15px;
+     }
+     .heart:before {
+        transform : rotate(45deg);
+     }
+     .heart:after {
+        left : 10.5px;
+        transform : rotate(135deg);
+     }
+     @keyframes heartfade {
+        0% {
+         opacity : 1;
+        }
+        50% {
+         opacity : 0;
+        }
+     }
+     @media screen and (min-width: 800px) {
+        @keyframes propel-image {
+    
+            100% {
+            position:absolute;
+            top: 110vh;
+            }
+        
+            0% {
+            position:absolute;
+            top: -150vh;
+            }
+      }
